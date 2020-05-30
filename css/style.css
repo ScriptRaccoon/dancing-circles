@@ -16,6 +16,7 @@ main {
 main > div {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #888;
+    margin: 7px 0px;
 }
 
 canvas {
