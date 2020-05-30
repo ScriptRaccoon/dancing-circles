@@ -1,0 +1,19 @@
+{
+  "name": "dancing-circles",
+  "version": "1.0.0",
+  "description": "Browser game which lets you add circles which dance with each other.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScriptRaccoon/dancing-circles.git"
+  },
+  "author": "Script Raccoon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScriptRaccoon/dancing-circles/issues"
+  },
+  "homepage": "https://github.com/ScriptRaccoon/dancing-circles#readme"
+}
