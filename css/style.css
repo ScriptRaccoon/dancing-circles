@@ -25,14 +25,15 @@ canvas {
 }
 
 input,
-select {
+select,
+button {
     font-family: inherit;
     font-size: inherit;
     border: none;
     outline: none;
     background: #445;
     color: white;
-    margin: 5px;
+    margin: 5px 0px;
     border-radius: 4px;
     text-align: center;
 }
@@ -45,8 +46,17 @@ select {
     width: 150px;
 }
 
+button {
+    margin-left: 0px;
+    width: 60px;
+    cursor: pointer;
+}
+
 #controls {
     display: flex;
-    justify-content: space-between;
     width: 1200px;
+}
+
+#controls > * {
+    margin-right: 50px;
 }

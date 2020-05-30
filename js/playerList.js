@@ -1,6 +1,7 @@
 import { randomColor, bound } from "./math.js";
 import { drawPlayer, canvDim } from "./draw.js";
 
+const clearBtn = document.querySelector("button");
 const sizeInput = document.querySelector("input");
 const orientationOnput = document.querySelector("select");
 
@@ -51,3 +52,7 @@ class PlayerList {
 }
 
 export const playerList = new PlayerList();
+
+clearBtn.addEventListener("click", () => {
+    playerList.players = [];
+});
