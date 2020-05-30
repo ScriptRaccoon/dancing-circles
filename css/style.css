@@ -19,17 +19,25 @@ main > div {
     margin: 7px 0px;
 }
 
+#canvasWrapper {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+}
+
 canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
     background-color: #ccc;
+}
+
+#canvas1 {
+    opacity: 1;
 }
 
 #canvas2 {
     opacity: 0;
-}
-
-#canvas1 {
-    transform: translateY(-800px);
-    opacity: 1;
 }
 
 input,
