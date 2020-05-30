@@ -9,32 +9,43 @@ body {
 
 main {
     display: flex;
-    height: 100vh;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-main > p {
-    margin: 10px;
+main > div {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: #888;
 }
 
 canvas {
     background-color: #ccc;
+    margin-bottom: 5px;
 }
 
-input {
+input,
+select {
     font-family: inherit;
     font-size: inherit;
     border: none;
     outline: none;
     background: #445;
     color: white;
-    padding: 2px;
     margin: 5px;
     border-radius: 4px;
-    width: 40px;
     text-align: center;
+}
+
+input {
+    width: 40px;
+}
+
+select {
+    width: 150px;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
 }

@@ -1,6 +1,8 @@
 export const canvas = document.querySelector("canvas");
 export const ctx = canvas.getContext("2d");
 
+export const canvDim = [canvas.clientWidth, canvas.clientHeight];
+
 export function drawPlayer(p) {
     ctx.fillStyle = p.color;
     ctx.strokeStyle = "black";

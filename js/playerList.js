@@ -1,8 +1,19 @@
-import { randInt, randomColor } from "./math.js";
-import { drawPlayer } from "./draw.js";
+import { randomColor, bound } from "./math.js";
+import { drawPlayer, canvDim } from "./draw.js";
 
 const sizeInput = document.querySelector("input");
+const orientationOnput = document.querySelector("select");
+
 sizeInput.value = "20";
+
+function getSize() {
+    return parseInt(sizeInput.value);
+}
+
+function getOrientation() {
+    const orText = orientationOnput.selectedOptions[0].text;
+    return orText === "clockwise" ? +1 : -1;
+}
 
 class PlayerList {
     constructor() {
@@ -10,11 +21,13 @@ class PlayerList {
     }
 
     add(pos) {
-        const size = parseInt(sizeInput.value);
+        const size = getSize();
         if (size) {
             const color = randomColor();
-            const p = { pos, size, color };
+            const orientation = getOrientation();
+            const p = { pos, size, color, orientation };
             this.players.push(p);
+            console.log(p);
             return p;
         }
     }
@@ -27,6 +40,12 @@ class PlayerList {
     draw() {
         for (const p of this.players) {
             drawPlayer(p);
+        }
+    }
+
+    boundToCanvas() {
+        for (const p of this.players) {
+            bound(p.pos, canvDim);
         }
     }
 }

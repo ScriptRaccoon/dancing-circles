@@ -12,9 +12,9 @@ export function dance(list) {
             if (distance(p.pos, q.pos) < p.size + q.size + threshold) {
                 const mid = scale(0.5, add(p.pos, q.pos));
                 const pdiff = sub(p.pos, mid);
-                p.pos = add(mid, rotate(rotationSpeed, pdiff));
+                p.pos = add(mid, rotate(p.orientation * rotationSpeed, pdiff));
                 const qdiff = sub(q.pos, mid);
-                q.pos = add(mid, rotate(rotationSpeed, qdiff));
+                q.pos = add(mid, rotate(q.orientation * rotationSpeed, qdiff));
             }
         }
     }

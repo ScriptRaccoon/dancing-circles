@@ -10,11 +10,8 @@ canvas.addEventListener("click", (e) => {
 timer.update = (deltaTime) => {
     clearCanvas();
     dance(playerList.players);
+    playerList.boundToCanvas();
     playerList.draw();
 };
 
 timer.start();
-
-// document.addEventListener("click", () => {
-//     timer.update();
-// });
