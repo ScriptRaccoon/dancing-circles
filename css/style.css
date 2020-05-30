@@ -21,7 +21,15 @@ main > div {
 
 canvas {
     background-color: #ccc;
-    margin-bottom: 5px;
+}
+
+#canvas2 {
+    opacity: 0;
+}
+
+#canvas1 {
+    transform: translateY(-800px);
+    opacity: 1;
 }
 
 input,
@@ -38,7 +46,7 @@ button {
     text-align: center;
 }
 
-input {
+input[type="text"] {
     width: 40px;
 }
 
@@ -55,6 +63,7 @@ button {
 #controls {
     display: flex;
     width: 1200px;
+    align-items: center;
 }
 
 #controls > * {

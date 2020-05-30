@@ -1,5 +1,5 @@
 import { randomColor, bound, add, sub, scale, rotate, distance } from "./math.js";
-import { canvas, mousePos, drawPlayer, canvDim } from "./draw.js";
+import { canvas1, mousePos, drawPlayer, canvDim, clearAll } from "./draw.js";
 
 const clearBtn = document.querySelector("button");
 const sizeInput = document.querySelector("input");
@@ -9,9 +9,10 @@ let players = [];
 
 clearBtn.addEventListener("click", () => {
     players = [];
+    clearAll();
 });
 
-canvas.addEventListener("click", (e) => {
+canvas1.addEventListener("click", (e) => {
     addPlayer(mousePos(e));
 });
 
@@ -48,7 +49,7 @@ export function boundPlayersToCanvas() {
     }
 }
 
-const rotationSpeed = Math.PI / 50;
+const rotationSpeed = Math.PI / 75;
 const threshold = 50;
 
 export function dancePlayers() {
