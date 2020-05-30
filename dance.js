@@ -1,6 +1,6 @@
 import { distance, add, sub, scale, rotate } from "./math.js";
 
-const rotationSpeed = 0.05;
+const rotationSpeed = Math.PI / 50;
 const threshold = 50;
 
 export function dance(list) {

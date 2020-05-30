@@ -14,3 +14,7 @@ timer.update = (deltaTime) => {
 };
 
 timer.start();
+
+// document.addEventListener("click", () => {
+//     timer.update();
+// });
