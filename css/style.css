@@ -46,34 +46,39 @@ button {
     font-family: inherit;
     font-size: inherit;
     border: none;
-    outline: none;
     background: #445;
     color: white;
-    margin: 5px 0px;
     border-radius: 4px;
     text-align: center;
 }
 
-input[type="text"] {
+input:hover,
+select:hover,
+button:hover {
+    cursor: pointer;
+    background-color: #585;
+}
+
+#sizeInput {
     width: 40px;
 }
 
-select {
+#orientationInput {
     width: 150px;
 }
 
 button {
-    margin-left: 0px;
-    width: 60px;
-    cursor: pointer;
+    padding: 5px 10px;
+}
+
+input,
+select {
+    padding: 2px 0px;
 }
 
 #controls {
     display: flex;
     width: 1200px;
     align-items: center;
-}
-
-#controls > * {
-    margin-right: 50px;
+    justify-content: space-between;
 }

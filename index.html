@@ -9,12 +9,13 @@
     <body>
         <main>
             <div id="controls">
-                <button>Clear</button>
-                <div>Next circle size: <input type="text" /></div>
+                <button id="clearBtn">Clear canvas</button>
+                <button id="removeBtn">Remove previous circle</button>
+                <div>Next circle size: <input type="text" id="sizeInput" /></div>
 
                 <div>
                     Next circle orientation:
-                    <select
+                    <select id="orientationInput"
                         ><option>clockwise</option>
                         <option>anti-clockwise</option></select
                     >

@@ -1,15 +1,20 @@
 import { randomColor, bound, add, sub, scale, rotate, distance } from "./math.js";
 import { canvas1, mousePos, drawPlayer, canvDim, clearAll } from "./draw.js";
 
-const clearBtn = document.querySelector("button");
-const sizeInput = document.querySelector("input");
-const orientationOnput = document.querySelector("select");
+const clearBtn = document.getElementById("clearBtn");
+const removeBtn = document.getElementById("removeBtn");
+const sizeInput = document.getElementById("sizeInput");
+const orientationOnput = document.getElementById("orientationInput");
 
 let players = [];
 
 clearBtn.addEventListener("click", () => {
     players = [];
     clearAll();
+});
+
+removeBtn.addEventListener("click", () => {
+    players.pop();
 });
 
 canvas1.addEventListener("click", (e) => {
