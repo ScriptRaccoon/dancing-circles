@@ -4,6 +4,8 @@ Browser game which lets you add circles which dance with each other. Try it out 
 
 https://zzt43.csb.app/
 
+![Demo with 4 circles](docs/demo.gif)
+
 _Rules._ When two circles are close to each other (distance is less than 50 pixels), they start to rotate around the midpoints of their midpoints (clockwise by default). When this rule is applied to many circles at a time, this can look like a dance.
 
 Click the canvas to generate the next circle. In the header you can
