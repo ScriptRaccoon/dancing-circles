@@ -1,9 +1,13 @@
+/* main */
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
     background-color: #113;
 }
 
@@ -13,11 +17,12 @@ main {
     flex-direction: column;
 }
 
-main > div {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #888;
-    margin: 7px 0px;
+#info,
+#controls {
+    margin: 10px 0px;
 }
+
+/* canvas */
 
 #canvasWrapper {
     position: relative;
@@ -40,16 +45,26 @@ canvas {
     opacity: 0;
 }
 
+/* controls */
+
+#controls {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
 input,
 select,
 button {
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
     border: none;
     background: #445;
-    color: white;
     border-radius: 4px;
     text-align: center;
+    padding: 2px 0px;
 }
 
 input:hover,
@@ -63,22 +78,6 @@ button:hover {
     width: 40px;
 }
 
-#orientationInput {
-    width: 150px;
-}
-
 button {
     padding: 5px 10px;
-}
-
-input,
-select {
-    padding: 2px 0px;
-}
-
-#controls {
-    display: flex;
-    width: 1200px;
-    align-items: center;
-    justify-content: space-between;
 }
