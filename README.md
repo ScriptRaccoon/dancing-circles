@@ -2,7 +2,7 @@
 
 Browser game which lets you add circles which dance with each other. Try it out here at codesandbox:
 
-https://zzt43.csb.app/
+https://4g6nl.codesandbox.io/
 
 ![Demo with 4 circles](docs/demo.gif)
 
