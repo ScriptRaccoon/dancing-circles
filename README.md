@@ -1,8 +1,8 @@
 ## Dancing circles
 
-Browser game which lets you add circles which dance with each other. Try it out here at codesandbox:
+Browser game which lets you add circles which dance with each other. Try it out here:
 
-https://4g6nl.codesandbox.io/
+https://dancing-circles.netlify.app
 
 ![Demo with 4 circles](docs/demo.gif)
 
