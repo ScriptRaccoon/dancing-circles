@@ -38,8 +38,22 @@ export class Circle {
                     if (STATE.showLines) {
                         c.connectWith(d);
                     }
-                    c.danceAround(d);
-                    d.danceAround(c);
+
+                    const midPoint = scale(0.5, add(c.pos, d.pos));
+
+                    const vector1 = sub(c.pos, midPoint);
+                    const rotatedVector1 = rotate(
+                        c.orientation * Circle.rotationSpeed,
+                        vector1
+                    );
+                    c.pos = add(midPoint, rotatedVector1);
+
+                    const vector2 = sub(d.pos, midPoint);
+                    const rotatedVector2 = rotate(
+                        d.orientation * Circle.rotationSpeed,
+                        vector2
+                    );
+                    d.pos = add(midPoint, rotatedVector2);
                 }
             }
         }
@@ -72,15 +86,5 @@ export class Circle {
         ctx.lineTo(...circle.pos);
         ctx.closePath();
         ctx.stroke();
-    }
-
-    danceAround(circle) {
-        const midPoint = scale(0.5, add(this.pos, circle.pos));
-        const vector = sub(this.pos, midPoint);
-        const rotatedVector = rotate(
-            this.orientation * Circle.rotationSpeed,
-            vector
-        );
-        this.pos = add(midPoint, rotatedVector);
     }
 }
