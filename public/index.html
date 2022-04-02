@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dancing circles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <dialog open id="modal">
+        <h1>Dancing circles</h1>
+        <p>
+            Click on the canvas to add circles. Watch how they
+            dance with each other when they are close enough.
+        </p>
+        <br />
+        <p>
+            Use the menu to adjust the size and the dance
+            orientation of the next circle. You can also remove the last or
+            even all circles.
+        </p>
+        <br>
+        <p>
+            Watch out how circles with different orientations interact with each other!
+        </p>
+        <br />
+        <button id="okBtn">Ok</button>
+    </dialog>
+    <canvas id="canvas"></canvas>
+    <details id="menu">
+        <summary>
+            <i class="fa-solid fa-bars"></i>
+        </summary>
+        <div id="menuContent">
+            <input id="sizeInput" title="size of next circle" type="number" autocomplete="off" value="20" min="1" />
+            <button id="orientationBtn" title="orientation of next circle">
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+            </button>
+            <button id="deleteBtn" title="delete last circle">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+            <button id="eraseBtn" title="delete all circles">
+                <i class="fa-solid fa-eraser"></i>
+            </button>
+        </div>
+    </details>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

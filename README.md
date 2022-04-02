@@ -1,21 +1,17 @@
 ## Dancing circles
 
-Browser game which lets you add circles which dance with each other. Try it out here:
+Browser game which lets you create circles which dance with each other.
 
 https://dancing-circles.netlify.app
 
-![Demo with 4 circles](docs/demo.gif)
+_Rules._ When two circles are close to each other (distance is less than 50 pixels), they start to rotate around the midpoint of their midpoints (clockwise by default). The circle midpoints are bound to the canvas.
 
-_Rules._ When two circles are close to each other (distance is less than 50 pixels), they start to rotate around the midpoints of their midpoints (clockwise by default). When this rule is applied to many circles at a time, this can look like a dance.
+When these rules are applied to many circles at a time, it produces a complex movement. Very interesting and non-predictable systems can arise already with 4 circles.
 
-Click the canvas to generate the next circle. In the header you can
+![Demo with 4 circles](./img/demo1.gif)
 
--   set the size of the next circle
--   set the orientation of the next circle
--   toggle midpoint view
--   clear the canvas
--   remove the previous circle
+Mixing clockwise and anticlockwise circles can produce chaos, wild dancing or even 'black holes': these are groups of fast rotating circles which converge towards a point and suck in all nearby circles.
 
-In midpoint view you see the history of the midpoints of the circles, which can be interesting curves on their own.
+![Demo of black hole](./img/demo2.gif)
 
-Very interesting and non-predictable systems can arise already with 4 circles. Mixing clockwise and anticlockwise circles can produce chaos, wild dancing or even 'black holes'.
+Click the canvas anywhere to generate a new circle at this point. In the menu you can adjust the size and the orientation of the next circle. You can also remove the last circle or even all circles.

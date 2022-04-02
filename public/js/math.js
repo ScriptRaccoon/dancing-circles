@@ -1,5 +1,8 @@
 export function distance(u, v) {
-    return Math.sqrt(Math.pow(u[0] - v[0], 2) + Math.pow(u[1] - v[1], 2), 2);
+    return Math.sqrt(
+        Math.pow(u[0] - v[0], 2) + Math.pow(u[1] - v[1], 2),
+        2
+    );
 }
 
 export function add(u, v) {
@@ -22,19 +25,17 @@ export function rotate(alpha, u) {
 }
 
 export function bound(u, d) {
-    for (const i of [0, 1]) {
-        if (u[i] < 0) u[i] = 0;
-        if (u[i] > d[i]) u[i] = d[i];
-    }
+    u[0] = Math.max(0, Math.min(u[0], d[0]));
+    u[1] = Math.max(0, Math.min(u[1], d[1]));
 }
 
-export function randInt(a, b) {
+function randomInteger(a, b) {
     return a + Math.floor(Math.random() * (b - a));
 }
 
 export function randomColor() {
-    const r = randInt(0, 255);
-    const g = randInt(0, 255);
-    const b = randInt(0, 255);
+    const r = randomInteger(0, 255);
+    const g = randomInteger(0, 255);
+    const b = randomInteger(0, 255);
     return `rgba(${r},${g},${b},0.8)`;
 }
