@@ -40,4 +40,9 @@ export function enableMenu() {
             const n = e.target.valueAsNumber;
             if (n >= 1) STATE.size = n;
         });
+    document
+        .getElementById("lineBtn")
+        .addEventListener("click", (e) => {
+            STATE.showLines = !STATE.showLines;
+        });
 }

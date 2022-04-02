@@ -8,6 +8,7 @@ import {
     randomColor,
     bound,
 } from "./math.js";
+import { STATE } from "./state.js";
 
 export class Circle {
     static list = [];
@@ -34,19 +35,11 @@ export class Circle {
                     distance(c.pos, d.pos) <
                     c.size + d.size + Circle.threshold
                 ) {
-                    const midPoint = scale(0.5, add(c.pos, d.pos));
-                    const vectorToC = sub(c.pos, midPoint);
-                    const rotatedVectorToC = rotate(
-                        c.orientation * Circle.rotationSpeed,
-                        vectorToC
-                    );
-                    c.pos = add(midPoint, rotatedVectorToC);
-                    const vectorToD = sub(d.pos, midPoint);
-                    const rotatedVectorToD = rotate(
-                        d.orientation * Circle.rotationSpeed,
-                        vectorToD
-                    );
-                    d.pos = add(midPoint, rotatedVectorToD);
+                    if (STATE.showLines) {
+                        c.connectWith(d);
+                    }
+                    c.danceAround(d);
+                    d.danceAround(c);
                 }
             }
         }
@@ -61,11 +54,33 @@ export class Circle {
     }
 
     draw() {
+        ctx.lineWidth = 2;
         ctx.fillStyle = this.color;
+        ctx.strokeStyle = "black";
         ctx.beginPath();
         ctx.arc(...this.pos, this.size, 0, 2 * Math.PI, true);
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
+    }
+
+    connectWith(circle) {
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "rgba(0,0,0,0.6)";
+        ctx.beginPath();
+        ctx.moveTo(...this.pos);
+        ctx.lineTo(...circle.pos);
+        ctx.closePath();
+        ctx.stroke();
+    }
+
+    danceAround(circle) {
+        const midPoint = scale(0.5, add(this.pos, circle.pos));
+        const vector = sub(this.pos, midPoint);
+        const rotatedVector = rotate(
+            this.orientation * Circle.rotationSpeed,
+            vector
+        );
+        this.pos = add(midPoint, rotatedVector);
     }
 }

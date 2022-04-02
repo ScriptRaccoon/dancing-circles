@@ -4,7 +4,6 @@ export const ctx = canvas.getContext("2d");
 function makeCanvasesFullScreen() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    ctx.lineWidth = "2";
 }
 
 window.addEventListener("resize", makeCanvasesFullScreen);
