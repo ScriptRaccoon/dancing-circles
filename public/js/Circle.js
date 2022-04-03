@@ -6,7 +6,6 @@ import {
     sub,
     rotate,
     randomColor,
-    bound,
 } from "./math.js";
 import { STATE } from "./state.js";
 
@@ -20,10 +19,17 @@ export class Circle {
         Circle.list.forEach((circle) => circle.draw());
     }
 
-    static boundToCanvas() {
-        Circle.list.forEach((circle) =>
-            bound(circle.pos, [canvas.width, canvas.height])
-        );
+    static removeIfOutside() {
+        Circle.list.forEach((circle) => {
+            if (
+                circle.pos[0] - circle.size > canvas.width ||
+                circle.pos[0] + circle.size < 0 ||
+                circle.pos[1] - circle.size > canvas.height ||
+                circle.pos[1] + circle.size < 0
+            ) {
+                Circle.list = Circle.list.filter((x) => x != circle);
+            }
+        });
     }
 
     static applyDance() {
