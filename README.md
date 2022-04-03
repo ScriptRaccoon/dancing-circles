@@ -4,7 +4,7 @@ Browser game which lets you create circles which dance with each other.
 
 https://dancing-circles.netlify.app
 
-_Rules._ When two circles are close to each other (distance is less than 50 pixels), they start to rotate around the midpoint of their midpoints (clockwise by default). The circle midpoints are bound to the canvas.
+_Rules._ When two circles are close to each other (distance is less than 50 pixels), they start to rotate around the midpoint of their midpoints (clockwise by default). Circles which get outside of the canvas are removed.
 
 When these rules are applied to many circles at a time, it produces a complex movement. Very interesting and non-predictable systems can arise already with 4 circles.
 

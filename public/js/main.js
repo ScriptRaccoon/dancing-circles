@@ -9,7 +9,7 @@ function loop() {
     if (!STATE.paused) {
         clearCanvas(STATE.showTrail ? 0.1 : 1);
         Circle.applyDance();
-        Circle.boundToCanvas();
+        Circle.removeIfOutside();
         Circle.drawAll();
     }
     requestAnimationFrame(loop);

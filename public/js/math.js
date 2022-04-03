@@ -24,11 +24,6 @@ export function rotate(alpha, u) {
     ];
 }
 
-export function bound(u, d) {
-    u[0] = Math.max(0, Math.min(u[0], d[0]));
-    u[1] = Math.max(0, Math.min(u[1], d[1]));
-}
-
 function randomInteger(a, b) {
     return a + Math.floor(Math.random() * (b - a));
 }
