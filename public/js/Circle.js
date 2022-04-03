@@ -70,11 +70,14 @@ export class Circle {
     draw() {
         ctx.lineWidth = 2;
         ctx.fillStyle = this.color;
-        ctx.strokeStyle = "black";
+
         ctx.beginPath();
         ctx.arc(...this.pos, this.size, 0, 2 * Math.PI, true);
         ctx.fill();
-        ctx.stroke();
+        if (!STATE.showTrail) {
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+        }
         ctx.closePath();
     }
 

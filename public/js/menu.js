@@ -45,4 +45,9 @@ export function enableMenu() {
         .addEventListener("click", (e) => {
             STATE.showLines = !STATE.showLines;
         });
+    document
+        .getElementById("trailBtn")
+        .addEventListener("click", () => {
+            STATE.showTrail = !STATE.showTrail;
+        });
 }

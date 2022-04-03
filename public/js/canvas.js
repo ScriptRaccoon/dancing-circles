@@ -1,3 +1,5 @@
+import { STATE } from "./state.js";
+
 export const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
 
@@ -11,7 +13,9 @@ window.addEventListener("resize", makeCanvasesFullScreen);
 makeCanvasesFullScreen();
 
 export function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const alpha = STATE.showTrail ? 0.1 : 1;
+    ctx.fillStyle = `rgba(244,244,244,${alpha})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 export function mousePos(e) {
