@@ -44,16 +44,24 @@ export function enableMenu() {
         .getElementById("lineBtn")
         .addEventListener("click", (e) => {
             STATE.showLines = !STATE.showLines;
+            toggleOpacity(e);
         });
     document
         .getElementById("trailBtn")
-        .addEventListener("click", () => {
+        .addEventListener("click", (e) => {
             STATE.showTrail = !STATE.showTrail;
+            toggleOpacity(e);
         });
 
     document
         .getElementById("pauseBtn")
-        .addEventListener("click", () => {
+        .addEventListener("click", (e) => {
             STATE.paused = !STATE.paused;
+            toggleOpacity(e);
         });
+}
+
+function toggleOpacity(e) {
+    const icon = e.target.children[0];
+    icon.style.opacity = 1.4 - icon.style.opacity;
 }

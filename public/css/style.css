@@ -92,6 +92,11 @@ button {
     padding: 8px;
     cursor: pointer;
     padding: 8px 15px;
+
+}
+
+#menu button {
+    width: 48px;
 }
 
 button:hover, button:focus {
@@ -109,7 +114,7 @@ input:hover, input:focus {
     outline: 1px solid #444;
 }
 
-button.mirror {
+button.mirror > i {
     transform: scaleX(-1);
 }
 
