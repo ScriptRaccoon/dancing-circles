@@ -35,10 +35,6 @@ export class Circle {
                     distance(c.pos, d.pos) <
                     c.size + d.size + Circle.threshold
                 ) {
-                    if (STATE.showLines) {
-                        c.connectWith(d);
-                    }
-
                     const midPoint = scale(0.5, add(c.pos, d.pos));
 
                     const vector1 = sub(c.pos, midPoint);
@@ -54,6 +50,10 @@ export class Circle {
                         vector2
                     );
                     d.pos = add(midPoint, rotatedVector2);
+
+                    if (STATE.showLines) {
+                        c.connectWith(d);
+                    }
                 }
             }
         }
@@ -68,13 +68,12 @@ export class Circle {
     }
 
     draw() {
-        ctx.lineWidth = 2;
         ctx.fillStyle = this.color;
-
         ctx.beginPath();
         ctx.arc(...this.pos, this.size, 0, 2 * Math.PI, true);
         ctx.fill();
         if (!STATE.showTrail) {
+            ctx.lineWidth = 2;
             ctx.strokeStyle = "black";
             ctx.stroke();
         }
