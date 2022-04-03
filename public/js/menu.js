@@ -50,4 +50,10 @@ export function enableMenu() {
         .addEventListener("click", () => {
             STATE.showTrail = !STATE.showTrail;
         });
+
+    document
+        .getElementById("pauseBtn")
+        .addEventListener("click", () => {
+            STATE.paused = !STATE.paused;
+        });
 }

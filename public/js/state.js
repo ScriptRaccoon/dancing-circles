@@ -3,4 +3,5 @@ export const STATE = {
     orientation: 1,
     showLines: false,
     showTrail: false,
+    paused: false,
 };
