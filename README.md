@@ -17,3 +17,7 @@ Mixing clockwise and anticlockwise circles can produce chaos, wild dancing or ev
 Click the canvas anywhere to generate a new circle at this point. In the menu you can adjust the size and the orientation of the next circle. You can also remove the last circle or even all circles. It is also possible to toggle lines between dancing circles.
 
 ![Demo of lines](./img/demo3.gif)
+
+Finally, there is also an option to show the trails of the circles.
+
+![Demo of trails](./img/demo4.gif)
