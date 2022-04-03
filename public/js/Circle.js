@@ -70,6 +70,7 @@ export class Circle {
         this.size = size;
         this.color = randomColor();
         this.orientation = orientation;
+        this.draw();
         Circle.list.push(this);
     }
 

@@ -18,7 +18,6 @@ function loop() {
 loop();
 
 canvas.addEventListener("click", (e) => {
-    if (STATE.paused) return;
     new Circle({
         pos: mousePos(e),
         size: STATE.size,
