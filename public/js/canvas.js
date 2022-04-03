@@ -12,7 +12,7 @@ window.addEventListener("resize", makeCanvasesFullScreen);
 makeCanvasesFullScreen();
 
 export function clearCanvas(alpha = 1) {
-    ctx.fillStyle = `rgba(244,244,244,${alpha})`;
+    ctx.fillStyle = `rgba(238,238,238,${alpha})`;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
