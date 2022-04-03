@@ -6,7 +6,7 @@ import { STATE } from "./state.js";
 enableMenu();
 
 function loop() {
-    clearCanvas();
+    clearCanvas(STATE.showTrail ? 0.1 : 1);
     Circle.applyDance();
     Circle.boundToCanvas();
     Circle.drawAll();
