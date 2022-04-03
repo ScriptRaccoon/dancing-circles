@@ -99,7 +99,7 @@ button {
     width: 48px;
 }
 
-button:hover, button:focus {
+button:hover, button:focus-visible {
     background: linear-gradient(130deg,#274,#395);
 }
 
@@ -110,7 +110,7 @@ input {
     font-size: 20px;
 }
 
-input:hover, input:focus {
+input:hover, input:focus-visible {
     outline: 1px solid #444;
 }
 
