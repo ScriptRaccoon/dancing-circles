@@ -45,6 +45,15 @@ h1 {
     font-size: 40px;
 }
 
+#modal a {
+    text-decoration: none;
+    color: #395;
+}
+
+#modal a:hover {
+    text-decoration: underline;
+}
+
 
 /* menu */
 
