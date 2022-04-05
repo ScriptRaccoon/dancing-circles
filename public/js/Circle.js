@@ -32,6 +32,7 @@ export class Circle {
     }
 
     static applyDance() {
+        const dancers = [];
         for (let i = 0; i < Circle.list.length; i++) {
             for (let j = i + 1; j < Circle.list.length; j++) {
                 const c = Circle.list[i];
@@ -40,6 +41,8 @@ export class Circle {
                     distance(c.pos, d.pos) <
                     c.size + d.size + STATE.threshold
                 ) {
+                    dancers.push([c, d]);
+
                     const midPoint = scale(0.5, add(c.pos, d.pos));
 
                     const vector1 = sub(c.pos, midPoint);
@@ -55,12 +58,12 @@ export class Circle {
                         vector2
                     );
                     d.pos = add(midPoint, rotatedVector2);
-
-                    if (STATE.showLines) {
-                        c.connectWith(d);
-                    }
                 }
             }
+        }
+
+        if (STATE.showLines) {
+            dancers.forEach(([c, d]) => c.connectWith(d));
         }
     }
 
