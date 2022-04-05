@@ -13,7 +13,6 @@ export class Circle {
     static list = [];
 
     static rotationSpeed = Math.PI / 75;
-    static threshold = 50;
 
     static drawAll() {
         Circle.list.forEach((circle) => circle.draw());
@@ -39,7 +38,7 @@ export class Circle {
                 const d = Circle.list[j];
                 if (
                     distance(c.pos, d.pos) <
-                    c.size + d.size + Circle.threshold
+                    c.size + d.size + STATE.threshold
                 ) {
                     const midPoint = scale(0.5, add(c.pos, d.pos));
 

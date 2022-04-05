@@ -40,6 +40,13 @@ export function enableMenu() {
             const n = e.target.valueAsNumber;
             if (n >= 1) STATE.size = n;
         });
+
+    document
+        .getElementById("thresholdInput")
+        .addEventListener("change", (e) => {
+            const t = e.target.valueAsNumber;
+            if (t >= 1) STATE.threshold = t;
+        });
     document
         .getElementById("lineBtn")
         .addEventListener("click", (e) => {

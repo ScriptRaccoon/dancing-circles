@@ -20,18 +20,15 @@
         </p>
         <br />
         <p>
-            Use the menu to adjust the size and the dance
-            orientation of the next circle, remove the last or
-            even all circles, toggle lines between dancing circles,
-            toggle trails of circles, or pause the simulation.
+            Use the menu to adjust the size and the dance orientation of the next circle,
+            change the global dance threshold, delete the last or even all circles,
+            toggle lines between dancing circles, toggle trails of circles,
+            or pause the simulation.
         </p>
         <br>
         <p>
-            Watch out how circles with different orientations interact with each other!
-        </p>
-        <br />
-        <p>
-            You can find the source code <a href="https://github.com/ScriptRaccoon/dancing-circles" target="_blank">here</a>.
+            You can find the source code <a href="https://github.com/ScriptRaccoon/dancing-circles"
+                target="_blank">here</a>.
         </p>
         <br>
         <button id="okBtn">Ok</button>
@@ -42,7 +39,19 @@
             <i class="fa-solid fa-bars"></i>
         </summary>
         <div id="menuContent">
-            <input id="sizeInput" title="size of next circle" type="number" autocomplete="off" value="20" min="1" />
+            <label for="sizeInput">
+                <span>
+                    Size of next circle
+                </span>
+                <input id="sizeInput" title="size of next circle" type="number" autocomplete="off" value="20" min="1" />
+            </label>
+            <label for="thresholdInput">
+                <span>
+                    Dance threshold
+                </span>
+                <input id="thresholdInput" title="dancing threshold" type="number" autocomplete="off" value="100"
+                    min="1" />
+            </label>
             <button id="orientationBtn" title="orientation of next circle">
                 <i class="fa-solid fa-arrow-rotate-right"></i>
             </button>
