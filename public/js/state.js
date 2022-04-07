@@ -1,5 +1,5 @@
 export const STATE = {
-    size: 20,
+    size: 15,
     threshold: 100,
     orientation: 1,
     showLines: false,
