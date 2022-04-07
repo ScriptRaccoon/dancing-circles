@@ -7,9 +7,10 @@
 }
 
 body {
-    --bgColor: rgb(238, 238, 238);
+    --bgColor: #fff;
     --fontColor: #111;
     --inputColor: #fff;
+    --labelColor: #666;
     background-color: var(--bgColor);
     color: var(--fontColor);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -17,9 +18,10 @@ body {
 }
 
 body.dark {
-    --bgColor:  rgb(20, 20, 20);
+    --bgColor:  #000;
     --fontColor: #eee;
     --inputColor: #444;
+    --labelColor: #999;
 }
 
 main {
@@ -146,6 +148,6 @@ button > i {
 #menu label span {
     display: block;
     font-size: 12px;
-    color: #555;
+    color: var(--labelColor);
     margin-bottom: 5px;
 }

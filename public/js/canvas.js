@@ -14,7 +14,7 @@ window.addEventListener("resize", makeCanvasesFullScreen);
 makeCanvasesFullScreen();
 
 export function clearCanvas(alpha = 1) {
-    const h = STATE.dark ? 20 : 238;
+    const h = STATE.dark ? 0 : 255;
     ctx.fillStyle = `rgba(${h},${h},${h},${alpha})`;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
