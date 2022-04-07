@@ -7,9 +7,19 @@
 }
 
 body {
-    background-color: rgb(238, 238, 238);
+    --bgColor: rgb(238, 238, 238);
+    --fontColor: #111;
+    --inputColor: #fff;
+    background-color: var(--bgColor);
+    color: var(--fontColor);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
+}
+
+body.dark {
+    --bgColor:  rgb(20, 20, 20);
+    --fontColor: #eee;
+    --inputColor: #444;
 }
 
 main {
@@ -36,7 +46,6 @@ menu {
     outline: none;
     box-shadow: 0px 0px 25px #0008;
     width: min(500px,90vw);
-
 }
 
 h1 {
@@ -92,7 +101,6 @@ button, input {
     box-shadow: 1px 1px 7px #0007;
     text-align: center;
     border-radius: 4px;
-
 }
 
 button {
@@ -119,8 +127,12 @@ input {
     font-size: 20px;
 }
 
+body.dark input {
+    background: var(--inputColor);
+}
+
 input:hover, input:focus-visible {
-    outline: 1px solid #444;
+    outline: 1px solid var(--fontColor);
 }
 
 button.mirror > i {

@@ -78,7 +78,7 @@ export class Circle {
         ctx.fill();
         if (!STATE.showTrail) {
             ctx.lineWidth = 2;
-            ctx.strokeStyle = "black";
+            ctx.strokeStyle = STATE.dark ? "#aaa" : "black";
             ctx.stroke();
         }
         ctx.closePath();
@@ -86,7 +86,9 @@ export class Circle {
 
     connectWith(circle) {
         ctx.lineWidth = 1;
-        ctx.strokeStyle = "rgba(0,0,0,0.6)";
+        ctx.strokeStyle = STATE.dark
+            ? "rgba(255,255,255,0.3)"
+            : "rgba(0,0,0,0.6)";
         ctx.beginPath();
         ctx.moveTo(...this.pos);
         ctx.lineTo(...circle.pos);

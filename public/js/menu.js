@@ -12,6 +12,7 @@ const orientationBtn = document.getElementById("orientationBtn");
 const lineBtn = document.getElementById("lineBtn");
 const trailBtn = document.getElementById("trailBtn");
 const pauseBtn = document.getElementById("pauseBtn");
+const darkBtn = document.getElementById("darkBtn");
 
 export function enableMenu() {
     okBtn.addEventListener("click", () => {
@@ -61,6 +62,12 @@ export function enableMenu() {
 
     pauseBtn.addEventListener("click", (e) => {
         STATE.paused = !STATE.paused;
+        toggleOpacity(e);
+    });
+
+    darkBtn.addEventListener("click", (e) => {
+        document.body.classList.toggle("dark");
+        STATE.dark = !STATE.dark;
         toggleOpacity(e);
     });
 }

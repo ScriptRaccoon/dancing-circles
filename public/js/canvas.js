@@ -1,3 +1,5 @@
+import { STATE } from "./state.js";
+
 /** @type { HTMLCanvasElement } */
 export const canvas = document.getElementById("canvas");
 export const ctx = canvas.getContext("2d");
@@ -12,7 +14,8 @@ window.addEventListener("resize", makeCanvasesFullScreen);
 makeCanvasesFullScreen();
 
 export function clearCanvas(alpha = 1) {
-    ctx.fillStyle = `rgba(238,238,238,${alpha})`;
+    const h = STATE.dark ? 20 : 238;
+    ctx.fillStyle = `rgba(${h},${h},${h},${alpha})`;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
