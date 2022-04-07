@@ -20,12 +20,7 @@ export class Circle {
 
     static removeIfOutside() {
         Circle.list.forEach((circle) => {
-            if (
-                circle.pos[0] - circle.size > canvas.width ||
-                circle.pos[0] + circle.size < 0 ||
-                circle.pos[1] - circle.size > canvas.height ||
-                circle.pos[1] + circle.size < 0
-            ) {
+            if (circle.isOutside()) {
                 Circle.list = Circle.list.filter((x) => x != circle);
             }
         });
@@ -97,5 +92,14 @@ export class Circle {
         ctx.lineTo(...circle.pos);
         ctx.closePath();
         ctx.stroke();
+    }
+
+    isOutside() {
+        return (
+            this.pos[0] - this.size > canvas.width ||
+            this.pos[0] + this.size < 0 ||
+            this.pos[1] - this.size > canvas.height ||
+            this.pos[1] + this.size < 0
+        );
     }
 }
