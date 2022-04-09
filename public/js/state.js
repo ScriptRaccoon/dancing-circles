@@ -6,4 +6,5 @@ export const STATE = {
     showTrail: false,
     paused: false,
     dark: false,
+    lightness: 255,
 };

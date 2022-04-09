@@ -69,6 +69,30 @@ export function enableMenu() {
         document.body.classList.toggle("dark");
         STATE.dark = !STATE.dark;
         toggleOpacity(e);
+
+        darkBtn.disabled = true;
+
+        if (STATE.dark) {
+            const interval = setInterval(() => {
+                if (STATE.lightness <= 0) {
+                    STATE.lightness = 0;
+                    clearInterval(interval);
+                    darkBtn.disabled = false;
+                    return;
+                }
+                STATE.lightness -= 15;
+            }, 10);
+        } else {
+            const interval = setInterval(() => {
+                if (STATE.lightness >= 255) {
+                    STATE.lightness = 255;
+                    clearInterval(interval);
+                    darkBtn.disabled = false;
+                    return;
+                }
+                STATE.lightness += 15;
+            }, 10);
+        }
     });
 }
 
