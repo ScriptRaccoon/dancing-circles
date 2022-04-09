@@ -11,9 +11,11 @@ body {
     --fontColor: #111;
     --inputColor: #fff;
     --labelColor: #666;
+    --transition-duration: 200ms;
     background-color: var(--bgColor);
     color: var(--fontColor);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color var(--transition-duration) linear, color var(--transition-duration) linear;
 }
 
 body.dark {
@@ -127,10 +129,8 @@ input {
     padding: 5px;    
     border-radius: 4px;
     font-size: 20px;
-}
-
-body.dark input {
-    background: var(--inputColor);
+    background-color: var(--inputColor);
+    transition: background-color var(--transition-duration) linear;
 }
 
 input:hover, input:focus-visible {
@@ -150,4 +150,5 @@ button > i {
     font-size: 12px;
     color: var(--labelColor);
     margin-bottom: 5px;
+    transition: color var(--transition-duration) linear;
 }
